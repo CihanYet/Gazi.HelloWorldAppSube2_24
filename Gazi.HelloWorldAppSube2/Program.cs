@@ -7,17 +7,20 @@ namespace Gazi.HelloWorldAppSube2
         static int sayi = 15;
         static void Main(string[] args)
         {
+            #region Verip Tipleri ve Tanımlamaları
             //Console.WriteLine("Gazi");
             //Console.WriteLine("Üniversitesi");
 
-            //byte a;
+            //const byte a = 20;
             //double d;
             //a = 30;
             //d = 40;
-
+            //Console.Write(a);
             //byte a = 30;
             //double d = 40;
             //a = 50;
+
+            //var number = 10;
 
             //Console.WriteLine(a);
 
@@ -32,16 +35,31 @@ namespace Gazi.HelloWorldAppSube2
             //float sayi = 3.15f;
             //double _sayi = 3.15;
             //decimal __sayi = 3.15m;
-
             //var sayi = 10.5D;//Implicit (Veri tipi belirlenmeden yapılan tanılamalar
             //byte number = 5;//Explicit (Veri tipinin açık olara belirtildiği tanımlamalar)
+            //var sonuc = true; 
+            #endregion
 
-            //var sonuc = true;
+            #region String Birleştime İşlemleri
+            //string isim = "Ahmet";
+            //string soyad = "Mehmet";
 
-            string isim = "Ahmet";
-            string soyad = "Mehmet";
+            //Console.WriteLine("Hoşgeldin, " + isim + " " + soyad);
+            //Console.WriteLine("Hoşgeldin, {0} {1}", isim, soyad);
+            //Console.WriteLine($"Hoşgeldin, {isim} {soyad}"); 
+            #endregion
 
+            #region Kullanıcı Etkileşimleri
+            Console.Write("İsminizi Giriniz:");
+            string name = Console.ReadLine();
+            Console.Write("Soyadınızı giriniz:");
+            string surname = Console.ReadLine();
+            Console.Write("Yaşınızı giriniz:");
+            string age = Console.ReadLine();
 
+            
+            Console.WriteLine($"Hoşgeldiniz,\nİsminiz:{name}\nSoyadınız:{surname}\nYaşınız:{age}");
+            #endregion
 
             Console.ReadKey();
         }
@@ -90,3 +108,12 @@ namespace Gazi.HelloWorldAppSube2
 
 //sbyte=Signed Byte
 //ushort=Unsigned Short
+
+//Değer tipleri belleğin STACK bölgesini kullanır
+//Referans tipleri HEAP bölgesi kullanır
+//HEAP bölgesi stack bölgesine göre daha büyüktür. Dolayısıyla tek seferde birden fazla veri depolayabilir. Örn. Ahmet stringinde 5 tane char vardır.
+//Referans tipi değişkenlerde, referanslar STACK bölgesinde, değerler HEAP bölgesinde tutulur. Değere ulaşmak için, o değerin HEAP bölgesindeki adresini bilen referansına ulaşmak gereklidir.
+
+//Metod Parametresi: Metodların işlerini yapabilmek için ihtiyaç dudukları verilerdir. Bir metod hiç parametre istemeyebilir yada birden fazla veri tipinde paramere de kabul edebilir.
+
+//void: Bu geri dönüş tipine sahip metodlar, işlerini yaptıktan sonra geriye bilgi dönmezler.
