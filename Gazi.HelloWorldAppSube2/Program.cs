@@ -7,7 +7,7 @@ namespace Gazi.HelloWorldAppSube2
         static int sayi = 15;
         static void Main(string[] args)
         {
-            #region Verip Tipleri ve Tanımlamaları
+            #region Veri Tipleri ve Tanımlamaları
             //Console.WriteLine("Gazi");
             //Console.WriteLine("Üniversitesi");
 
@@ -44,22 +44,67 @@ namespace Gazi.HelloWorldAppSube2
             //string isim = "Ahmet";
             //string soyad = "Mehmet";
 
-            //Console.WriteLine("Hoşgeldin, " + isim + " " + soyad);
+            //Console.WriteLine("Hoşgeldin, "+ isim + " " + soyad);
             //Console.WriteLine("Hoşgeldin, {0} {1}", isim, soyad);
-            //Console.WriteLine($"Hoşgeldin, {isim} {soyad}"); 
+            //Console.WriteLine($"Hoşgeldin, {isim} {soyad}");
             #endregion
 
             #region Kullanıcı Etkileşimleri
-            Console.Write("İsminizi Giriniz:");
-            string name = Console.ReadLine();
-            Console.Write("Soyadınızı giriniz:");
-            string surname = Console.ReadLine();
-            Console.Write("Yaşınızı giriniz:");
-            string age = Console.ReadLine();
+            //try
+            //{
+            //    Console.Write("İsminizi Giriniz:");
+            //    string name = Console.ReadLine();
+            //    Console.Write("Soyadınızı giriniz:");
+            //    string surname = Console.ReadLine();
+            //    Console.Write("Yaşınızı giriniz:");
+            //    byte age = byte.Parse(Console.ReadLine());
+            //    Console.WriteLine($"Hoşgeldiniz,\nİsminiz:{name}\nSoyadınız:{surname}\nYaşınız:{age}");
+            //}
+            //catch (FormatException)
+            //{
+            //    Console.WriteLine("Yaşınızı sayı ile giriniz.");
+            //}   
+            //catch(OverflowException)
+            //{
+            //    Console.WriteLine("0-255 arası değer giriniz");    
+            //}
+            //catch(Exception ex)
+            //{
+            //    Console.WriteLine("Bir hata oluştu...");//Kullanıcıya Göster
 
-            
-            Console.WriteLine($"Hoşgeldiniz,\nİsminiz:{name}\nSoyadınız:{surname}\nYaşınız:{age}");
+            //    Console.WriteLine($"Tarih:{DateTime.Now}\nMessage:{ex.Message}\nStack Trace:{ex.StackTrace}");//Kendimiz için tuttuğumuz loglar.Veritabanı,txt dosyası,email vb olabilir.
+            //}
+
             #endregion
+
+            double maas = 5000;
+            maas -= 1000;
+            Console.WriteLine(maas);
+
+            #region Tür Dönüşümleri
+
+            //byte sayi = 20;
+            //int number = sayi;//Implicit Type Casting
+
+            //checked
+            //{
+            //    int sayi = 258;
+            //    byte number = (byte)sayi;//Explicit Type Casting
+            //    Console.WriteLine(number); 
+            //}
+
+            //string value = "20";
+            //string value2 = "30";
+            //byte sayi = Convert.ToByte(value);
+            //byte sayi2 = byte.Parse(value2);
+            //Console.WriteLine(sayi + sayi2);
+
+            //int sayi = 20;//STACK
+            //object value = sayi;//STACK->HEAP Boxing
+            //int number = (int)value;//Heap->Stack Unboxing 
+            #endregion
+
+
 
             Console.ReadKey();
         }
@@ -117,3 +162,22 @@ namespace Gazi.HelloWorldAppSube2
 //Metod Parametresi: Metodların işlerini yapabilmek için ihtiyaç dudukları verilerdir. Bir metod hiç parametre istemeyebilir yada birden fazla veri tipinde paramere de kabul edebilir.
 
 //void: Bu geri dönüş tipine sahip metodlar, işlerini yaptıktan sonra geriye bilgi dönmezler.
+
+//C# programlama dili Tip Güvenliği(Type Safety) sağlayan bir dildir.
+//Uyumsuz tipler arası veri ataması yapılamaz. Örn. string->byte
+//checked blokları: Büyük türden küçük türe yapılan dönüşümlerde hata atarak, veri kaybı ihtimalini önler.
+//Debug:Hata yakalama işlemleri. 
+//Hata yönetimleri C#'da try-catch ile yapılır
+
+//Ctrl+F5: Start without debugging
+//F5: Start Debugging
+
+//1 && 1 = 1
+//1 && 0 = 0
+//0 && 1 = 0
+//0 && 0 = 0
+
+//1 || 1 = 1
+//1 || 0 = 1
+//0 || 1 = 1
+//0 || 0 = 0
