@@ -63,12 +63,12 @@ namespace Gazi.HelloWorldAppSube2
             //catch (FormatException)
             //{
             //    Console.WriteLine("Yaşınızı sayı ile giriniz.");
-            //}   
-            //catch(OverflowException)
-            //{
-            //    Console.WriteLine("0-255 arası değer giriniz");    
             //}
-            //catch(Exception ex)
+            //catch (OverflowException)
+            //{
+            //    Console.WriteLine("0-255 arası değer giriniz");
+            //}
+            //catch (Exception ex)
             //{
             //    Console.WriteLine("Bir hata oluştu...");//Kullanıcıya Göster
 
@@ -77,9 +77,20 @@ namespace Gazi.HelloWorldAppSube2
 
             #endregion
 
-            double maas = 5000;
-            maas -= 1000;
-            Console.WriteLine(maas);
+            //double maas = 5000;
+            //maas -= 1000;// maas = maas - 1000;
+            //Console.WriteLine(maas);
+
+            //int sayi1 = 10;
+            //int sayi2 = 20;
+
+            //int sayi3 = ++sayi1;
+
+
+            // Console.WriteLine(sayi2 % sayi1);
+
+            //Ternary Operator - 3 adet operand alır.
+            //string sonuc = sayi1 > sayi2 ? "Sayı 1 büyük" : "Sayı2 büyük veya sayılar eşit";
 
             #region Tür Dönüşümleri
 
@@ -88,9 +99,9 @@ namespace Gazi.HelloWorldAppSube2
 
             //checked
             //{
-            //    int sayi = 258;
+            //    int sayi = 257;
             //    byte number = (byte)sayi;//Explicit Type Casting
-            //    Console.WriteLine(number); 
+            //    Console.WriteLine(number);
             //}
 
             //string value = "20";
@@ -105,7 +116,40 @@ namespace Gazi.HelloWorldAppSube2
             #endregion
 
 
+            //Console.WriteLine("1. sayıyı giriniz:");
+            //int sayi1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("2. sayıyı giriniz:");
+            //int sayi2 = int.Parse(Console.ReadLine());
 
+            //if (sayi1>sayi2)
+            //{
+            //    Console.WriteLine("Sayı 1 büyüktür");
+            //}
+            //else if(sayi2>sayi1)
+            //{
+            //    Console.WriteLine("Sayı 2 büyüktür");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Sayılar eşit");
+            //}
+
+
+            Console.WriteLine("Hava nasıl?(Güzel/Kötü)");
+            string cevap = Console.ReadLine().ToLower().Trim();
+
+            if (cevap == "güzel")
+            {
+                Console.WriteLine("Dışarı çık");
+            }
+            else if (cevap == "kötü")
+            {
+                Console.WriteLine("Evde otur");
+            }
+            else
+            {
+                Console.WriteLine("Sadece Güzel/Kötü cevabı verebilirsiniz.");
+            }
             Console.ReadKey();
         }
     }
@@ -181,3 +225,12 @@ namespace Gazi.HelloWorldAppSube2
 //1 || 0 = 1
 //0 || 1 = 1
 //0 || 0 = 0
+
+//Breakpoint:Programın istenen satırda durdurulup, sonraki satırların adım adım izlenmesine olanak sağlayan DEBUG yöntemidir.
+
+//Case Sensitive: C# programlama dilinde büyüm harfler ile küçük harfler aynı değildir. Büyük/Küçük harf duyarlılığı
+
+//String classının metodlarından bazıları
+//ToLower(): Tüm karakterleri küçük harfe çevir
+//ToUpper():Tüm karakterleri büyük harfe çevir
+//Trim(): String ifadenin başında ve sonunda bulunan boşlukları siler
