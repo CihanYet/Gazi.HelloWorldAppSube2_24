@@ -121,11 +121,11 @@ namespace Gazi.HelloWorldAppSube2
             //Console.WriteLine("2. sayıyı giriniz:");
             //int sayi2 = int.Parse(Console.ReadLine());
 
-            //if (sayi1>sayi2)
+            //if (sayi1 > sayi2)
             //{
             //    Console.WriteLine("Sayı 1 büyüktür");
             //}
-            //else if(sayi2>sayi1)
+            //else if (sayi2 > sayi1)
             //{
             //    Console.WriteLine("Sayı 2 büyüktür");
             //}
@@ -135,22 +135,130 @@ namespace Gazi.HelloWorldAppSube2
             //}
 
 
-            Console.WriteLine("Hava nasıl?(Güzel/Kötü)");
-            string cevap = Console.ReadLine().ToLower().Trim();
+            //Console.WriteLine("Hava nasıl?(Güzel/Kötü)");
+            //string cevap = Console.ReadLine().ToLower().Trim();
 
-            if (cevap == "güzel")
+            //if (cevap == "güzel")
+            //{
+            //    Console.WriteLine("Kaç derece");
+            //    sbyte derece = sbyte.Parse(Console.ReadLine());
+            //    if (derece < 15)
+            //    {
+            //        Console.WriteLine("Hava soğuk labda otur");
+            //    }
+            //    else if (derece >= 15 && derece <= 35)
+            //    {
+            //        Console.WriteLine("Dışarı çık");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Hava sıcak labda otur.");
+            //    }
+            //}
+            //else if (cevap == "kötü")
+            //{
+            //    Console.WriteLine("Evde otur");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Sadece Güzel/Kötü cevabı verebilirsiniz.");
+            //}
+
+            Console.WriteLine("İşlem seçiniz:\n1-EFT\n2-Havale İşlemleri\n3-İnternet Bankacılığı\n4-Şifre İşlemleri");
+            byte cevap = byte.Parse(Console.ReadLine());
+            if (cevap == 1)
             {
-                Console.WriteLine("Dışarı çık");
+                Console.WriteLine("EFT işlemleri");
             }
-            else if (cevap == "kötü")
+            else if (cevap == 2)
             {
-                Console.WriteLine("Evde otur");
+                Console.WriteLine("Havale işlemleri");
+            }
+            else if (cevap == 3)
+            {
+                Console.WriteLine("İnternet Bankacılığı işlemleri");
+            }
+            else if (cevap == 4)
+            {
+                Console.WriteLine("Şifre işlemleri");
             }
             else
             {
-                Console.WriteLine("Sadece Güzel/Kötü cevabı verebilirsiniz.");
+                Console.WriteLine("Hatalı giriş yaptınız.");
             }
+
+
+            switch (cevap)
+            {
+                case 1:
+                    Console.WriteLine("EFT İşlemleri");
+                    break;
+                case 2:
+                    Console.WriteLine("Havale İşlemleri");
+                    break;
+                case 3:
+                    Console.WriteLine("İnternet Bankacılığı");
+                    break;
+                case 4:
+                    Console.WriteLine("Şifre İşlemleri");
+                    break;
+                default:
+                    Console.WriteLine("Hatalı Giriş Yaptınız");
+                    break;
+            }
+
             Console.ReadKey();
+
+            //<15 : Hava soğuk Evde otur
+            //15-35 : Dışarı çık
+            //>35 Hava sıcak evde otur
+
+
+            //Dil Seçiniz (TR/EN):TR
+            //1-Kare
+            //2-Daire
+            //3-Üçgen
+            //1
+            //Kare seçtiniz. Alan/Çevre?
+            //Alan
+            //Karenin bir kenarının uzunluğunu giriniz:5
+            //Karenin alanı:25
+        
+
+            Console.WriteLine("Şekil seçiniz:\n1-Kare\n2-Daire\n3-Üçgen");
+            byte secim = byte.Parse(Console.ReadLine());
+            switch (secim)
+            {
+                case 1:
+                    Console.WriteLine("Kare seçtiniz. Alan/Çevre?");
+                    string hesap = Console.ReadLine().ToLower().Trim();
+                    Console.WriteLine("Karenin kenar uzunluğunu giriniz:");
+                    int kenar = int.Parse(Console.ReadLine());
+                    //if (hesap == "alan")
+                    //{
+                    //    Console.WriteLine($"Karenin alanı:{kenar * kenar}");
+                    //}
+                    //else if (hesap == "çevre")
+                    //{
+                    //    Console.WriteLine($"Karenin çevresi:{4 * kenar}");
+                    //}
+                    //else
+                    //{
+                    //    Console.WriteLine("Hatalı seçim yaptınız.");
+                    //}
+
+                    Console.WriteLine(hesap == "alan" ? $"Karenin alanı:{kenar * kenar}" : $"Karenin Çevresi:{4 * kenar}");
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    Console.WriteLine("Hatalı seçim yaptınız..");
+                    break;
+            }
+
+
         }
     }
 }
