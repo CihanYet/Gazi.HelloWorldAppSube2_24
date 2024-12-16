@@ -223,9 +223,25 @@ namespace Gazi.HelloWorldAppSube2
             //Alan
             //Karenin bir kenarının uzunluğunu giriniz:5
             //Karenin alanı:25
-        
 
-            Console.WriteLine("Şekil seçiniz:\n1-Kare\n2-Daire\n3-Üçgen");
+
+            Console.WriteLine("Dil seçiniz:\n1-TR\n2-EN");
+            byte language = byte.Parse(Console.ReadLine());
+            string selection = String.Empty;
+            switch (language)
+            {
+                case 1:
+                    selection = "Şekil seçiniz:\n1-Kare\n2-Daire\n3-Üçgen";
+                    break;
+                case 2:
+                    selection = "Select a shape:\n1-Square\n2-Circle\n3-Triangle";
+                    break;
+                default:
+                    Console.WriteLine("Hatalı seçim");
+                    return;//void metodlardan çıkmak için kullanılır. Burada Main metodundan çıkıldı.
+                    //break;
+            }
+            Console.WriteLine(selection);
             byte secim = byte.Parse(Console.ReadLine());
             switch (secim)
             {
@@ -342,3 +358,5 @@ namespace Gazi.HelloWorldAppSube2
 //ToLower(): Tüm karakterleri küçük harfe çevir
 //ToUpper():Tüm karakterleri büyük harfe çevir
 //Trim(): String ifadenin başında ve sonunda bulunan boşlukları siler
+
+//DRY: Don't Repeat Yourself
