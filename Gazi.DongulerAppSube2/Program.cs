@@ -135,22 +135,33 @@ namespace Gazi.DongulerAppSube2
             //Devam etmek istiyormusunuz?h
             //Girilen sayıların toplamı:15
 
+
+            //while (true)
+            //{
+            //    Console.WriteLine("Sayı giriniz:");
+            //    int sayi = int.Parse(Console.ReadLine());
+            //    toplam += sayi;
+            //    Console.WriteLine("Devam etmek istiyor musunuz?");
+            //    char cvp = char.Parse(Console.ReadLine());
+            //    if (cvp == 'h')
+            //    {
+            //        Console.WriteLine($"Sayıların toplamı:{toplam}");
+            //        break;
+            //    }
+            //}
+
             int toplam = 0;
-            while (true)
+            char cvp;
+            do
             {
                 Console.WriteLine("Sayı giriniz:");
                 int sayi = int.Parse(Console.ReadLine());
                 toplam += sayi;
-                Console.WriteLine("Devam etmek istiyor musunuz?");
-                char cvp = char.Parse(Console.ReadLine());
-                if (cvp == 'h')
-                {
-                    Console.WriteLine($"Sayıların toplamı:{toplam}");
-                    break;
-                }
-            }
+                Console.WriteLine("Devam etmek istiyor musunuz?E/H");
+                cvp = char.Parse(Console.ReadLine());
+            } while (cvp == 'e');
 
-
+            Console.WriteLine($"Sayıların toplamı:{toplam}");
 
         }
     }
